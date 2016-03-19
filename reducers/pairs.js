@@ -1,4 +1,4 @@
-const abSelect = (state = {}, action) => {
+const pairs = (state = {}, action) => {
   switch (action.type) {
     case 'SELECT_CARD':
       return state
@@ -7,4 +7,4 @@ const abSelect = (state = {}, action) => {
   }
 }
 
-export default abSelect
+export default pairs
