@@ -1,4 +1,4 @@
-const menus = (state = {}, action) => {
+const menus = (state = [], action) => {
   switch (action.type) {
     case 'REMOVE_MENU':
       return state

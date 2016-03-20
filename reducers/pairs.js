@@ -1,4 +1,4 @@
-const pairs = (state = {}, action) => {
+const pairs = (state = [], action) => {
   switch (action.type) {
     case 'SELECT_CARD':
       return state

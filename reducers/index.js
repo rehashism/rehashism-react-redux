@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux'
 import pairs from './pairs'
 import menus from './menus'
-import menuByIds from './menuByIds'
+import menusById from './menusById'
 
 const menuApp = combineReducers({
   pairs,
   menus,
-  menuByIds
+  menusById
 })
 
 export default menuApp
