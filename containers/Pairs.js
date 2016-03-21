@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import MenuCard from '../components/MenuCard'
+import { discardCard } from '../actions'
 
 let Pairs = ({ pairs, menusById, onMenuClick }) => (
   <ul style={{padding: '0'}}>
@@ -25,7 +26,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     onMenuClick: (id) => {
       console.log(id)
-      // dispatch(toggleTodo(id))
+      dispatch(discardCard(id))
     }
   }
 }
