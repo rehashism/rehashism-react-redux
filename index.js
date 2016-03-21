@@ -8,8 +8,8 @@ import injectTapEventPlugin from 'react-tap-event-plugin'
 injectTapEventPlugin()
 
 let initialState = {
-  pairs: [0, 1],
-  menus: [2, 3, 4, 5],
+  pairs: [3, 1],
+  menus: [2, 0, 4, 5],
   menusById: [
     {
       id: 0,
@@ -45,8 +45,6 @@ let initialState = {
 }
 
 let store = createStore(menuApp, initialState)
-
-console.log(store.getState())
 
 render(
   <Provider store={store}>

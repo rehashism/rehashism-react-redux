@@ -2,19 +2,22 @@ import React from 'react'
 import { connect } from 'react-redux'
 import MenuCard from '../components/MenuCard'
 
-let Pairs = ({ menusById }) => (
+let Pairs = ({ pairs, menusById }) => (
   <ul style={{padding: '0'}}>
-    {menusById.map(menu =>
+    {pairs.map(item =>
       <MenuCard
-        key={menu.id}
-        menu={menu}
+        key={item}
+        menu={menusById[item]}
       />
     )}
   </ul>
 )
 
 const mapStateToProps = (state) => {
-  return { menusById: state.menusById }
+  return {
+    pairs: state.pairs,
+    menusById: state.menusById
+  }
 }
 
 Pairs = connect(mapStateToProps)(Pairs)
