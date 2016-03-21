@@ -8,8 +8,8 @@ import injectTapEventPlugin from 'react-tap-event-plugin'
 injectTapEventPlugin()
 
 let initialState = {
-  pairs: [3, 1],
-  menus: [2, 0, 4, 5],
+  pairs: [1, 2],
+  menus: [0, 3, 4, 5],
   menusById: [
     {
       id: 0,

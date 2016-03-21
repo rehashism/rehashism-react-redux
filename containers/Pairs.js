@@ -2,12 +2,13 @@ import React from 'react'
 import { connect } from 'react-redux'
 import MenuCard from '../components/MenuCard'
 
-let Pairs = ({ pairs, menusById }) => (
+let Pairs = ({ pairs, menusById, onMenuClick }) => (
   <ul style={{padding: '0'}}>
     {pairs.map(item =>
       <MenuCard
         key={item}
         menu={menusById[item]}
+        onClick={() => onMenuClick(item)}
       />
     )}
   </ul>
@@ -20,7 +21,19 @@ const mapStateToProps = (state) => {
   }
 }
 
-Pairs = connect(mapStateToProps)(Pairs)
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onMenuClick: (id) => {
+      console.log(id)
+      // dispatch(toggleTodo(id))
+    }
+  }
+}
+
+Pairs = connect(
+    mapStateToProps,
+    mapDispatchToProps
+    )(Pairs)
 
 export default Pairs
 
